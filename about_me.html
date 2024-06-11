@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポートフォリオ</title>
+    <title>About Me</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <!-- Header -->
     <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">ポートフォリオ</a>
+        <a class="navbar-brand" href="#">ポートフォリオ - About Me</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +26,6 @@
             </ul>
         </div>
     </header>
-
     <!-- Sidebar -->
     <div class="sidebar">
         <button class="closebtn" onclick="closeNav()">×</button>
@@ -39,33 +38,43 @@
             <!-- 他の作品リンクを追加 -->
         </div>
     </div>
-
     <!-- Main Content -->
     <div id="main">
-        <h1>制作物一覧</h1>
+        <h1>About Me</h1>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <img src="image1.jpg" class="card-img-top" alt="作品1">
-                        <div class="card-body">
-                            <h5 class="card-title">作品1</h5>
-                            <p class="card-text">作品1の説明</p>
-                            <a href="work1.html" class="btn btn-primary">詳細を見る</a>
-                        </div>
-                    </div>
+                <div class="col-lg-6">
+                    <img src="your_photo.jpg" class="img-fluid" alt="自撮り写真">
                 </div>
-                <!-- 他の作品カードを追加 -->
+                <div class="col-lg-6">
+                    <table class="table table-bordered mt-3">
+                        <tr>
+                            <th>名前</th>
+                            <td>あなたの名前</td>
+                        </tr>
+                        <tr>
+                            <th>生年月日</th>
+                            <td>あなたの生年月日</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>あなたの年齢</td>
+                        </tr>
+                        <tr>
+                            <th>趣味</th>
+                            <td>あなたの趣味</td>
+                        </tr>
+                        <!-- 他の情報を追加 -->
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
     <script>
         function openNav() {
             document.querySelector(".sidebar").style.width = "250px";
             document.querySelector("#main").style.marginLeft = "250px";
         }
-
         function closeNav() {
             document.querySelector(".sidebar").style.width = "0";
             document.querySelector("#main").style.marginLeft= "0";
