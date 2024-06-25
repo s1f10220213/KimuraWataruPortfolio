@@ -1,0 +1,15 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+#about {
+    text-align: center;
+}
+#portfolio .card {
+    transition: transform 0.2s;
+}
+#portfolio .card:hover {
+    transform: scale(1.05);
+}
+footer {
+    text-align: center;
+}
