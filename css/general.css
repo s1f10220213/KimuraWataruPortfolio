@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.head-item {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+#head-menu {
+    position: fixed;
+    top:1%;
+    left:3%;
+    z-index:100;
+
+    width: 50%;
+
+    font-size: larger;
+}
+
+#cover-genre {
+    display: flex;
+}
+.tool-icon {
+    display: flex;
+    list-style: none;
+    width: 5%;
+    height: 5%;
+}

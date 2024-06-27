@@ -6,15 +6,85 @@
     <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/detail,css">
+    <link rel="stylesheet" href="css/general.css">
 </head>
     <body>
         <!-- header -->
-        
-        <!-- Main Contents (game #00 / title / genre / useIcon / period / team / description / play) -->
+        <div id="head-menu">
+            <span class="head-item">
+                <a href="index.html">Home</a>
+            </span>
+            /
+            <span class="head-item">
+                <a href="aboutMe.html">About me</a>
+            </span>
+            /
+            <span class="head-item">
+                <a href="mailto:kimucyc1216@gmail.com">Contact</a>
+            </span>
+        </div>
+
+        <!-- Cover (game #00 / title / genre / toolIcon / period / team / description / play) -->
+        <div id="cover">
+            <div id="cover-modelnum">
+                game
+                <span id="cover-sharp">#</span>
+                <span id="cover-num">01</span>
+            </div>
+            
+            <div id="cover-title">
+                Title
+            </div>
+
+            <ul id="cover-genre">
+                <li class="tool-icon"><img src="image1.jpg" alt="1" /></li>
+                <li class="tool-icon"><img src="image2.jpg" alt="2" /></li>
+            </ul>
+
+            <div id="cover-period">
+                2003/12/18
+                <span id="period-bar">~</span>
+                2024/6/27
+            </div>
+
+            <div id="cover-team">
+                <p id="team-model">個人制作/チーム制作</p>
+                <br>
+                <span id="team-credit">Credit</span>
+                <br>
+                <span id="team-myrole">MainProgrammer 木村航</span>
+                <br>
+                <span id="team-otherrole">Designer 高橋悠 / Planner 酒井耀平</span>
+            </div>
+
+            <div id="cover-description">
+                <p>Description</p>
+                夏休みにサークル内で1週間ゲームジャムを開催した際に制作したゲームです。
+            </div>
+
+            <div id="play-link">
+                <a href="https://unityroom.com/games/3dblockbreaker" target="_blank"><img src="image2.jpg" alt="play" /></a>
+                <p id="play-here">こちらから遊べます</p>
+            </div>
+        </div>
         
         <!-- Slideshow -->
 
         <!-- Concept / Detail tab -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
 
         <!-- Content -->
 
