@@ -51,7 +51,8 @@ Slideshow
 }
 
 .slider-item {
-    width: 48vw;
+    position: fixed;
+    width: 24vw;
     aspect-ratio: 16 / 9;
     background-color: aqua;
 }
