@@ -1,8 +1,15 @@
+body {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: #000000;
 }
 
+/*====================================
+Header
+======================================*/
 .head-item {
     margin-right: 1%;
     margin-left: 1%;
@@ -18,12 +25,79 @@ a {
     font-size: larger;
 }
 
-#cover-genre {
+/*====================================
+Footer
+======================================*/
+#foot-menu {
+    position: absolute;
+    top: 200%;
+    width: 100%;
+    height: 7%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
 }
-.tool-icon {
+#foot-title {
+    color: white;
+}
+
+/*====================================
+Slideshow
+======================================*/
+#slider {
     display: flex;
-    list-style: none;
-    width: 5%;
-    height: 5%;
+    background-color: blue;
+}
+
+.slider-item {
+    width: 48vw;
+    aspect-ratio: 16 / 9;
+    background-color: aqua;
+}
+
+/*== Arrow ==*/
+.arrow {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.35s ease;
+    user-select: none;
+    z-index: 3;
+
+    height: 30px;
+    width: 30px;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow:hover {
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid rgba(0, 0, 0, 1);
+    color: black;
+    scale: 1.2;
+    font-size: 25px;
+}
+
+/*== Indicater ==*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.35s ease;
+}
+.dot:hover {
+    background-color: #717171;
+}
+.dot.active {
+    background-color: #717171;
 }
