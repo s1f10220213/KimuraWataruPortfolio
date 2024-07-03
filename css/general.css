@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 a {
@@ -46,12 +46,23 @@ Footer
 Slideshow
 ======================================*/
 #slider {
+    position: relative;
     display: flex;
     background-color: blue;
-}
+    width: 100vw;
+    height: 30vw;
 
+    justify-content: center;
+}
+#slider-base {
+    position: absolute;
+    width: 30vw;
+    top: 5vw;
+    aspect-ratio: 16 / 9;
+    background-color: black;
+}
 .slider-item {
-    position: fixed;
+    position: absolute;
     width: 24vw;
     aspect-ratio: 16 / 9;
     background-color: aqua;

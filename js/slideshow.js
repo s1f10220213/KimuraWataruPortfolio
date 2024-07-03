@@ -3,7 +3,7 @@ let preIndex = 0;
 const slides = $(".slider-item");
 const dots = $(".dot");
 const totalSlides = slides.length;
-
+const slideBase = $("#slider-base")[0];
 
 //　インディケーター更新
 function updateIndicators(index) {
@@ -12,10 +12,11 @@ function updateIndicators(index) {
 }
 
 //　スライドの位置設定
-function showSlides(index) {
-    const stdX = window.innerWidth*0.5;
-    const offsetX = slides[preIndex].getBoundingClientRect().width * 0.5;
-    const stdY = slides[preIndex].offsetY;
+function showSlides(index) { 
+    const offsetX = slideBase.getBoundingClientRect().width * 0.5;
+    const baseRect = slideBase.getBoundingClientRect();
+    const stdX = baseRect.left + baseRect.width / 2;
+    const stdY = baseRect.top + baseRect.height / 2;
 
     slides.removeClass("active");
     slides.css("z-index", "1");
@@ -51,10 +52,10 @@ function currentSlide(n) {
 }
 
 $(document).ready(function(){
-    $(".prev").click(function() {
+    $(".left").click(function() {
         changeSlide(-1);
     });
-    $(".next").click(function() {
+    $(".right").click(function() {
         changeSlide(1);
     });
     $(".dot0").click(function() {
