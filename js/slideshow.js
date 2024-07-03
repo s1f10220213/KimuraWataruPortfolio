@@ -3,7 +3,7 @@ let preIndex = 0;
 const slides = $(".slider-item");
 const dots = $(".dot");
 const totalSlides = slides.length;
-const slideBase = $("#slider-base")[0];
+const offsetX = slides[preIndex].getBoundingClientRect().width;
 
 //　インディケーター更新
 function updateIndicators(index) {
@@ -13,10 +13,7 @@ function updateIndicators(index) {
 
 //　スライドの位置設定
 function showSlides(index) { 
-    const offsetX = slideBase.getBoundingClientRect().width * 0.5;
-    const baseRect = slideBase.getBoundingClientRect();
-    const stdX = baseRect.left + baseRect.width / 2;
-    const stdY = baseRect.top + baseRect.height / 2;
+    const stdY = "40%";
 
     slides.removeClass("active");
     slides.css("z-index", "1");
@@ -26,15 +23,14 @@ function showSlides(index) {
     const nextIndex = (index + 1) % totalSlides;
     const nexnextIndex = (index + 2) % totalSlides;
 
-    gsap.to(slides[preprevIndex], { duration: 0.35, x: stdX-offsetX*2, y: stdY, opacity: 0, scale: 0.5 });
-    gsap.to(slides[prevIndex], { duration: 0.35, x: stdX-offsetX, y: stdY, opacity: 0.5, scale: 1 });
-    gsap.to(slides[nextIndex], { duration: 0.35, x: stdX+offsetX, y: stdY, opacity: 0.5, scale: 1 });
-    gsap.to(slides[nexnextIndex], { duration: 0.35, x: stdX+offsetX*2, y: stdY, opacity: 0, scale: 0.5 });
-    gsap.to(slides[index], { duration: 0.35, x: stdX, y: stdY, opacity: 1, scale: 1.8 });
+    gsap.to(slides[preprevIndex], { duration: 0.35, x: -offsetX*2, y: stdY, opacity: 0, scale: 0.5 });
+    gsap.to(slides[prevIndex], { duration: 0.35, x: -offsetX, y: stdY, opacity: 0.5, scale: 1 });
+    gsap.to(slides[nextIndex], { duration: 0.35, x: offsetX, y: stdY, opacity: 0.5, scale: 1 });
+    gsap.to(slides[nexnextIndex], { duration: 0.35, x: offsetX*2, y: stdY, opacity: 0, scale: 0.5 });
+    gsap.to(slides[index], { duration: 0.35, x: 0, y: stdY, opacity: 1, scale: 1.8 });
     
     $(slides[index]).addClass("active");
     updateIndicators(index);
-    console.log(preprevIndex, stdX-offsetX*2 , " / ", prevIndex, stdX-offsetX, "/", index, stdX);
 }
 
 //　スライドをn個ずらして更新
@@ -74,5 +70,6 @@ $(document).ready(function(){
         currentSlide(4);
     });
 
+    gsap.set(slides, { x: 0, y: 0 });
     showSlides(slideIndex);
 });
