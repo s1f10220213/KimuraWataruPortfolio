@@ -1,9 +1,8 @@
 let slideIndex = 0;
-let preIndex = 0;
 const slides = $(".slider-item");
 const dots = $(".dot");
 const totalSlides = slides.length;
-const offsetX = slides[preIndex].getBoundingClientRect().width;
+const offsetX = slides[slideIndex].getBoundingClientRect().width;
 
 //　インディケーター更新
 function updateIndicators(index) {
@@ -35,14 +34,12 @@ function showSlides(index) {
 
 //　スライドをn個ずらして更新
 function changeSlide(n) {
-    preIndex = slideIndex;
     slideIndex = (slideIndex + n + totalSlides) % totalSlides;
     showSlides(slideIndex);
 }
 
 //　スライドの位置指定で更新
 function currentSlide(n) {
-    preIndex = slideIndex;
     slideIndex = n;
     showSlides(slideIndex);
 }
