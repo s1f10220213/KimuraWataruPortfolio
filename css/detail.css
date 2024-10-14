@@ -1,4 +1,4 @@
-#cover-genre {
+#cover-tool {
     display: flex;
 }
 .tool-icon {
@@ -30,4 +30,20 @@
     background-color: #fff;
     border: 2px solid #000;
     scale: 1.2;
+}
+
+
+#tab-concept-detail {
+    cursor: pointer;
+}
+#concept {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
+#detail {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: red;
 }

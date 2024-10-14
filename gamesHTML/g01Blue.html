@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="css/detail.css">
-        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="../css/detail.css">
+        <link rel="stylesheet" href="../css/general.css">
     </head>
 
     <body>
@@ -34,36 +34,42 @@
             </div>
             
             <div id="cover-title">
-                Title
+                Blue Robot
             </div>
 
-            <ul id="cover-genre">
-                <li class="tool-icon"><img src="image1.jpg" alt="1" /></li>
-                <li class="tool-icon"><img src="image2.jpg" alt="2" /></li>
-            </ul>
+            <div id="cover-genre">
+                3D Action
+            </div>
+
+            <div id="cover-tool">
+                <div class="tool-icon"><img src="image1.jpg" alt="unity" /></div>
+                <div class="tool-icon"><img src="image2.jpg" alt="photoshop" /></div>
+            </div>
 
             <div id="cover-period">
-                2003/12/18
+                2023/7/25
                 <span id="period-bar">~</span>
-                2024/6/27
+                2023/10/31
             </div>
 
             <div id="cover-team">
-                <p id="team-model">個人制作/チーム制作</p>
+                <p id="team-model">個人制作</p>
                 <br>
                 <span id="team-credit">Credit</span>
                 <br>
-                <span id="team-myrole">MainProgrammer 木村航</span>
-                <br>
-                <span id="team-otherrole">Designer 高橋悠 / Planner 酒井耀平</span>
+                <span id="team-myrole">Program + Plan + Design + Model : 木村航</span>
             </div>
 
             <div id="cover-description">
                 <p>Description</p>
-                夏休みにサークル内で1週間ゲームジャムを開催した際に制作したゲームです。
+                大学祭の展示のために2年の夏休みに制作しました。
+                ダッシュ・ジャンプ・回避・滑空によるスタイリッシュかつ爽快なアクションを心掛け、
+                攻撃方法も近距離のブレード・遠距離の射撃を搭載することで、プレイスタイルの幅を広げました。
+                UIやテクスチャ、シェーダーも世界観にあったサイバーチックでシンプルかつクールに仕上げました。
+                人生で初めて多くの第三者の手に触れるゲームの制作でしたが、度重なる試行錯誤を経て多くの学びを得ることができた制作でした
             </div>
 
-            <a href="https://unityroom.com/games/3dblockbreaker" target="_blank"><div id="play-icon">Play</div></a>
+            <a href="https://unityroom.com/games/3dblockbreaker" target="_blank"><div id="play-icon">Visit</div></a>
         </div>
         
         <!-- Slideshow -->
@@ -99,42 +105,42 @@
 
         <!-- Concept / Detail tab -->
         <div id="tab-concept-detail">
-            <span id="tab-concept">
+            <div id="tab-concept">
                 Concept
-            </span>
-            <span id="tab-detail">
+            </div>
+            <div id="tab-detail">
                 Detail
-            </span>
+            </div>
         </div>
 
         <!-- Content -->
         <div id="concept">
-            <div class="concept-item">
+            <div class="concept-item" id="ci-1">
 
             </div>
-            <div class="concept-item">
+            <div class="concept-item" id="ci-2">
                 
             </div>
-            <div class="concept-item">
+            <div class="concept-item" id="ci-3">
                 
             </div>
-            <div class="concept-item">
+            <div class="concept-item" id="ci-4">
                 
             </div>
         </div>
 
         <!-- Detail -->
         <div id="detail">
-            <div class="detail-item">
+            <div class="detail-item" id="di-1">
 
             </div>
-            <div class="detail-item">
+            <div class="detail-item" id="di-2">
                 
             </div>
-            <div class="detail-item">
+            <div class="detail-item" id="di-3">
                 
             </div>
-            <div class="detail-item">
+            <div class="detail-item"  id="di-4">
                 
             </div>
         </div>
@@ -147,6 +153,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="js/slideshow.js"></script>
+        <script src="../js/slideshow.js"></script>
+        <script src="../js/toggleTab.js"></script>
     </body>
 </html>

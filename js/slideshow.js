@@ -23,8 +23,8 @@ function showSlides(index) {
     const nexnextIndex = (index + 2) % totalSlides;
 
     gsap.to(slides[preprevIndex], { duration: 0.35, x: -offsetX*2, y: stdY, opacity: 0, scale: 0.5 });
-    gsap.to(slides[prevIndex], { duration: 0.35, x: -offsetX, y: stdY, opacity: 0.5, scale: 1 });
-    gsap.to(slides[nextIndex], { duration: 0.35, x: offsetX, y: stdY, opacity: 0.5, scale: 1 });
+    gsap.to(slides[prevIndex], { duration: 0.35, x: -offsetX*1.35, y: stdY, opacity: 0.5, scale: 1 });
+    gsap.to(slides[nextIndex], { duration: 0.35, x: offsetX*1.35, y: stdY, opacity: 0.5, scale: 1 });
     gsap.to(slides[nexnextIndex], { duration: 0.35, x: offsetX*2, y: stdY, opacity: 0, scale: 0.5 });
     gsap.to(slides[index], { duration: 0.35, x: 0, y: stdY, opacity: 1, scale: 1.8 });
     

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="../css/detail.css">
+        <link rel="stylesheet" href="../css/general.css">
+    </head>
+
+    <body>
+        <!-- header -->
+        <div id="head-menu" class="canselEnter">
+            <span class="head-item">
+                <a href="index.html">Home</a>
+            </span>
+            /
+            <span class="head-item">
+                <a href="aboutMe.html">About me</a>
+            </span>
+            /
+            <span class="head-item">
+                <a href="mailto:kimucyc1216@gmail.com">Contact</a>
+            </span>
+        </div>
+
+        <div class="main">
+        <!-- Cover (game #00 / title / genre / toolIcon / period / team / description / play) -->
+        <div id="cover">
+            <div id="cover-modelnum">
+                game
+                <span id="cover-sharp">#</span>
+                <span id="cover-num">01</span>
+            </div>
+            
+            <div id="cover-title">
+                Title
+            </div>
+
+            <div id="cover-genre">
+                genre
+            </div>
+
+            <div id="cover-tool">
+                <div class="tool-icon"><img src="image1.jpg" alt="1" /></div>
+                <div class="tool-icon"><img src="image2.jpg" alt="2" /></div>
+            </div>
+
+            <div id="cover-period">
+                2003/12/18
+                <span id="period-bar">~</span>
+                2024/6/27
+            </div>
+
+            <div id="cover-team">
+                <p id="team-model">個人制作/チーム制作</p>
+                <br>
+                <span id="team-credit">Credit</span>
+                <br>
+                <span id="team-myrole">MainProgrammer 木村航</span>
+                <br>
+                <span id="team-otherrole">Designer 高橋悠 / Planner 酒井耀平</span>
+            </div>
+
+            <div id="cover-description">
+                <p>Description</p>
+                夏休みにサークル内で1週間ゲームジャムを開催した際に制作したゲームです。
+            </div>
+
+            <a href="https://unityroom.com/games/3dblockbreaker" target="_blank"><div id="play-icon">Play</div></a>
+        </div>
+        
+        <!-- Slideshow -->
+
+        <div id="slider">
+            <div class="slider-item slide1">
+                
+            </div>
+            <div class="slider-item slide2">
+
+            </div>
+            <div class="slider-item slide3">
+
+            </div>
+            <div class="slider-item slide4">
+
+            </div>
+            <div class="slider-item slide5">
+                
+            </div>
+
+            <div class="arrow left">&#10094;</div>
+            <div class="arrow right">&#10095;</div>
+
+            <div id="slider-indicater">
+                <span class="dot active dot0" onclick="currentSlide(0)"></span>
+                <span class="dot dot1" onclick="currentSlide(1)"></span>
+                <span class="dot dot2" onclick="currentSlide(2)"></span>
+                <span class="dot dot3" onclick="currentSlide(3)"></span>
+                <span class="dot dot4" onclick="currentSlide(4)"></span>
+            </div>
+        </div>        
+
+        <!-- Concept / Detail tab -->
+        <div id="tab-concept-detail">
+            <div id="tab-concept">
+                Concept
+            </div>
+            <div id="tab-detail">
+                Detail
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="concept">
+            <div class="concept-item" id="ci-1">
+
+            </div>
+            <div class="concept-item" id="ci-2">
+                
+            </div>
+            <div class="concept-item" id="ci-3">
+                
+            </div>
+            <div class="concept-item" id="ci-4">
+                
+            </div>
+        </div>
+
+        <!-- Detail -->
+        <div id="detail">
+            <div class="detail-item" id="di-1">
+
+            </div>
+            <div class="detail-item" id="di-2">
+                
+            </div>
+            <div class="detail-item" id="di-3">
+                
+            </div>
+            <div class="detail-item"  id="di-4">
+                
+            </div>
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="foot-menu">
+            <span id="foot-title">Kimura Wataru</span>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="../js/slideshow.js"></script>
+    </body>
+</html>

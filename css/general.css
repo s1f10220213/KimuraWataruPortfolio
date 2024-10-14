@@ -1,10 +1,12 @@
 body {
     overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
 }
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #fff;
 }
 
 /*====================================
@@ -17,10 +19,10 @@ Header
 #head-menu {
     position: fixed;
     top:1%;
-    left:3%;
+    right:0%;
     z-index:3;
 
-    width: 50%;
+    width: 20%;
 
     font-size: larger;
 }
@@ -50,13 +52,13 @@ Slideshow
     display: flex;
     background-color: blue;
     width: 100vw;
-    height: 30vw;
+    height: 20vw;
 
     justify-content: center;
 }
 .slider-item {
     position: absolute;
-    width: 24vw;
+    width: 16vw;
     aspect-ratio: 16 / 9;
     background-color: aqua;
 }

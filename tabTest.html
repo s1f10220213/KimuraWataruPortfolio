@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表示/非表示の切り替え</title>
+    <style>
+        #toggleContent {
+            display: none; /* 初めは非表示に設定 */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleButton">表示/非表示切替</button>
+    <div id="toggleContent">
+        ここに表示される内容があります。
+    </div>
+
+    <script>
+        // ボタンと内容の要素を取得
+        const button = document.getElementById('toggleButton');
+        const content = document.getElementById('toggleContent');
+
+        // ボタンにクリックイベントを追加
+        button.addEventListener('click', function() {
+            // contentの表示状態を切り替え
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block'; // 表示
+            } else {
+                content.style.display = 'none'; // 非表示
+            }
+        });
+    </script>
+
+</body>
+</html>
